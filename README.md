@@ -17,60 +17,62 @@ For design I took very small inspiration from Dribbble.com
 
 The application follows a clean, scalable architecture inspired by the BLoC pattern, with a strict separation of concerns.
 I try to separate some services into separate packages, so it can be reused along projects.
-
 /
 ├── lib/
-│ ├── src/
-│ │ ├── bloc/
-│ │ │ ├── match_bloc/
-│ │ │ │ ├── match_bloc.dart
-│ │ │ │ ├── match_event.dart
-│ │ │ │ └── match_state.dart
-│ │ ├── data/
-│ │ │ ├── data_sources/
-│ │ │ │ ├── match_remote_data_source.dart
-│ │ │ │ └── selection_local_data_source.dart
-│ │ │ ├── models/
-│ │ │ │ ├── match_model.dart
-│ │ │ │ └── selection_model.dart
-│ │ │ └── repositories/
-│ │ │ └── match_repository.dart
-│ │ ├── ui/
-│ │ │ ├── screens/
-│ │ │ │ └── match_list_screen.dart
-│ │ │ ├── widgets/
-│ │ │ │ ├── match_list_item.dart
-│ │ │ │ └── sport_filter_bar.dart
-│ │ │ └── app.dart
-│ │ └── main.dart
+│   ├── src/
+│   │   ├── bloc/
+│   │   │   ├── match_bloc/
+│   │   │   │   ├── match_bloc.dart
+│   │   │   │   ├── match_event.dart
+│   │   │   │   └── match_state.dart
+│   │   ├── data/
+│   │   │   ├── data_sources/
+│   │   │   │   ├── match_remote_data_source.dart
+│   │   │   │   └── selection_local_data_source.dart
+│   │   │   ├── models/
+│   │   │   │   ├── match_model.dart
+│   │   │   │   └── selection_model.dart
+│   │   │   └── repositories/
+│   │   │       └── match_repository.dart
+│   │   ├── ui/
+│   │   │   ├── screens/
+│   │   │   │   └── match_list_screen.dart
+│   │   │   ├── widgets/
+│   │   │   │   ├── match_list_item.dart
+│   │   │   │   ├── odds_button.dart
+│   │   │   │   └── sport_filter_bar.dart
+│   │   │   └── app.dart
+│   │   └── main.dart
 │
 ├── packages/
-│ ├── local_storage/
-│ │ └── lib/
-│ │ ├── src/
-│ │ │ ├── local_storage_interface.dart
-│ │ │ ├── hive_local_storage_impl.dart
-│ │ │ └── shared_prefs_local_storage_impl.dart
-│ │ └── local_storage.dart
-│ ├── ui_kit/
-│ │ └── lib/
-│ │ ├── src/
-│ │ │ ├── themes/
-│ │ │ └── widgets/
-│ │ └── ui_kit.dart
-│ └── web_socket_client/
-│ └── lib/
-│ ├── src/
-│ │ └── mock_web_socket_client.dart
-│ └── web_socket_client.dart
+│   ├── local_storage/
+│   │   └── lib/
+│   │       ├── src/
+│   │       │   ├── local_storage_interface.dart
+│   │       │   ├── hive_local_storage_impl.dart
+│   │       │   └── shared_prefs_local_storage_impl.dart
+│   │       └── local_storage.dart
+│   ├── ui_kit/
+│   │   └── lib/
+│   │       ├── src/
+│   │       │   ├── themes/
+│   │       │   └── widgets/
+│   │       └── ui_kit.dart
+│   └── web_socket_client/
+│       └── lib/
+│           ├── src/
+│           │   └── mock_web_socket_client.dart
+│           └── web_socket_client.dart
 │
 ├── test/
-│ ├── bloc/
-│ │ └── match_bloc_test.dart
-│ └── widget/
-│ └── match_list_screen_test.dart
+│   ├── bloc/
+│   │   └── match_bloc_test.dart
+│   └── widget/
+│       └── match_list_screen_test.dart
 │
 └── pubspec.yaml
+
+
 
 - **`main.dart`**: Entry point of the application.
 - **`lib/src//data`**: The data layer, responsible for sourcing data from remote (mock WebSocket) and local (device storage) sources.
