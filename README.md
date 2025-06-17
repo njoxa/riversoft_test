@@ -17,7 +17,7 @@ For design I took very small inspiration from Dribbble.com
 
 The application follows a clean, scalable architecture inspired by the BLoC pattern, with a strict separation of concerns.
 I try to separate some services into separate packages, so it can be reused along projects.
-/
+```javascript
 ├── lib/
 │   ├── src/
 │   │   ├── bloc/
@@ -71,7 +71,7 @@ I try to separate some services into separate packages, so it can be reused alon
 │       └── match_list_screen_test.dart
 │
 └── pubspec.yaml
-
+```
 
 
 - **`main.dart`**: Entry point of the application.
