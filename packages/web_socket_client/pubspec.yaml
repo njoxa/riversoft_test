@@ -1,0 +1,13 @@
+name: web_socket_client
+description: A package for managing WebSocket connections in Flutter applications.
+version: 0.0.1
+publish_to: 'none'
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # For generating random numbers and data
+  faker: ^2.1.0
